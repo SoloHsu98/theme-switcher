@@ -1,95 +1,67 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+/** @jsxImportSource @emotion/react */
+import Button from "@/components/Buttons";
+import Navbar from "@/components/Navbar";
+import Sidebar from "@/components/Sidebar";
 
-export default function Home() {
+// import React, { useState } from "react";
+// import { css } from "@emotion/react";
+// import { ThemeProvider } from "@emotion/react";
+
+// const dayTheme = {
+//   color: "#37d8e6",
+//   backgroundColor: "#ffdd00",
+// };
+
+// const nightTheme = {
+//   color: "#2c3e50",
+//   backgroundColor: "#bdc3c7",
+// };
+// const Page = () => {
+//   const [isLight, setIsLight] = useState(false);
+//   const [theme, setTheme] = useState(dayTheme);
+
+//   const handleClick = () => {
+//     const isDay = !isLight;
+//     setIsLight(isDay);
+//     setTheme(isDay ? dayTheme : nightTheme);
+//   };
+
+//   return (
+//     <ThemeProvider theme={theme}>
+//       <button onClick={handleClick} css={styles.testing({ theme })}>
+//         Click here to change theme
+//       </button>
+//     </ThemeProvider>
+//   );
+// };
+
+// export default Page;
+
+// const styles = {
+//   testing: ({ theme }) => css`
+//     color: ${theme.color};
+//     background-color: ${theme.backgroundColor};
+//   `,
+// };
+
+// pages/index.js
+import { css } from "@emotion/react";
+import { useState } from "react";
+
+const containerStyle = css`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const Home = () => {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <div css={containerStyle}>
+      This is home page
+      <footer>{/* Footer content */}</footer>
+    </div>
+  );
+};
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
-}
+export default Home;
