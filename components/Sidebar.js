@@ -11,7 +11,7 @@ const Sidebar = () => {
   const { theme } = useContext(ThemeContext); // Use the useContext hook to access the theme
 
   const sidebarStyle = css`
-    background-color: ${theme.colors.background ||
+    background-color: ${theme.colors.secondaryBg ||
     "#f0f0f0"}; // Use the theme's background color
     padding: 20px;
     width: 200px;

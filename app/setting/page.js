@@ -37,6 +37,13 @@ const Setting = () => {
   const handleThemeChange = (selectedTheme) => {
     setSelectedTheme(themes[selectedTheme]);
   };
+
+  const handleBackgroundColorChange = (event) => {
+    setSelectedTheme((prevTheme) => ({
+      ...prevTheme,
+      colors: { ...prevTheme.colors, background: event.target.value },
+    }));
+  };
   const handleTextColorChange = (event) => {
     setSelectedTheme((prevTheme) => ({
       ...prevTheme,
@@ -86,6 +93,15 @@ const Setting = () => {
           css={colorPickerStyle}
           value={theme.colors.button}
           onChange={handleButtonColorChange}
+        />
+      </div>
+      <div css={colorPickerContainerStyle}>
+        <label>Background Color:</label>
+        <input
+          type="color"
+          css={colorPickerStyle}
+          value={theme.colors.button}
+          onChange={handleBackgroundColorChange}
         />
       </div>
     </div>

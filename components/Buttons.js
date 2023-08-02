@@ -16,7 +16,7 @@ const Button = ({ label }) => {
     font-size: 16px;
     font-weight: bold;
     background-color: ${theme.colors.button || "#fbbf24"};
-    color: ${theme.colors.text || "#000000"};
+    color: "#000000";
   `;
 
   return <button css={buttonStyle}>{label}</button>;
